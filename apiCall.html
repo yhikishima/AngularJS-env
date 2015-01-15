@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="myApp">
+<head>
+<meta charset="utf-8">
+<title>AngularJS incremental search demo</title>
+</head>
+<body>
+<div ng-controller="MainCtrl">
+  この間の部分が非同期での読み込み<br>
+  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓<br>
+  <div ng-show="show_loading">
+    読み込み中..
+  </div>
+  <li ng-repeat="item in items">
+    {{item.id}} - {{item.name}}
+  </li>
+  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓<br>
+</div>
+
+<script src="js/lib/angular.min.js"></script>
+<script src="js/lib/angular-resource.min.js"></script>
+<script src="js/services/data.js"></script>
+<script src="js/controllers/main.js"></script>
+</body>
+</html>
